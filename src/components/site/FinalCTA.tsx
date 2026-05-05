@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ctaImg from "@/assets/cta-yoga.jpg";
+import { useBooking } from "./BookingDialog";
 
 const FinalCTA = () => {
+  const { open } = useBooking();
   return (
     <section id="cta" className="py-24 md:py-32">
       <div className="container">
@@ -26,10 +28,10 @@ const FinalCTA = () => {
               supported, and beautifully guided — every single day.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl">
+              <Button variant="hero" size="xl" onClick={() => open("Start your journey")}>
                 Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button variant="soft" size="xl">Talk to an Expert</Button>
+              <Button variant="soft" size="xl" onClick={() => open("Talk to an expert")}>Talk to an Expert</Button>
             </div>
           </div>
         </div>
