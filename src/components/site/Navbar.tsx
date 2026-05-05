@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <nav className="container flex items-center justify-between py-4">
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="Tomome logo" className="h-10 w-auto" />
+          <img src={logo} alt="Tomome logo" className="h-16 md:h-20 w-auto" />
         </a>
         <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
