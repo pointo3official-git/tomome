@@ -7,10 +7,12 @@ import WhyUs from "@/components/site/WhyUs";
 import Testimonials from "@/components/site/Testimonials";
 import FinalCTA from "@/components/site/FinalCTA";
 import Footer from "@/components/site/Footer";
+import { BookingProvider } from "@/components/site/BookingDialog";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <BookingProvider>
+      <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
       <About />
@@ -20,7 +22,8 @@ const Index = () => {
       <Testimonials />
       <FinalCTA />
       <Footer />
-    </main>
+      </main>
+    </BookingProvider>
   );
 };
 

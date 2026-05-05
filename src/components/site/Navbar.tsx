@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import { useBooking } from "./BookingDialog";
 
 const links = [
   { href: "#about", label: "About" },
@@ -14,6 +15,7 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { open: openBooking } = useBooking();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -44,8 +46,8 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="hidden md:block">
-          <Button variant="hero" size="lg" asChild>
-            <a href="#cta">Book Consultation</a>
+          <Button variant="hero" size="lg" onClick={() => openBooking("Book a consultation")}>
+            Book Consultation
           </Button>
         </div>
         <button
@@ -70,8 +72,8 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <Button variant="hero" asChild>
-              <a href="#cta">Book Consultation</a>
+            <Button variant="hero" onClick={() => { setOpen(false); openBooking("Book a consultation"); }}>
+              Book Consultation
             </Button>
           </ul>
         </div>
