@@ -35,25 +35,25 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
     <BookingCtx.Provider value={{ open }}>
       {children}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="sm:max-w-[480px] rounded-3xl border-border/60 p-0 overflow-hidden">
-          <div className="bg-gradient-hero px-8 pt-8 pb-6">
-            <div className="w-12 h-12 rounded-2xl bg-primary-soft flex items-center justify-center mb-4">
-              <Heart className="w-6 h-6 text-primary fill-primary" />
+        <DialogContent className="w-[calc(100%-1.5rem)] sm:max-w-[480px] max-h-[92vh] overflow-y-auto rounded-3xl border-border/60 p-0">
+          <div className="bg-gradient-hero px-6 sm:px-8 pt-6 sm:pt-8 pb-5 sm:pb-6">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-primary-soft flex items-center justify-center mb-3 sm:mb-4">
+              <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-primary fill-primary" />
             </div>
             <DialogHeader className="text-left space-y-2">
-              <DialogTitle className="font-serif text-3xl text-foreground">{title}</DialogTitle>
-              <DialogDescription className="text-muted-foreground">
+              <DialogTitle className="font-serif text-2xl sm:text-3xl text-foreground">{title}</DialogTitle>
+              <DialogDescription className="text-sm sm:text-base text-muted-foreground">
                 Share a little about yourself and we'll connect you with a caring expert.
               </DialogDescription>
             </DialogHeader>
           </div>
 
-          <form onSubmit={onSubmit} className="px-8 pb-8 pt-2 space-y-4">
+          <form onSubmit={onSubmit} className="px-6 sm:px-8 pb-6 sm:pb-8 pt-3 sm:pt-4 space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Your name</Label>
               <Input id="name" required placeholder="Aanya Sharma" className="rounded-xl h-11" />
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input id="email" type="email" required placeholder="you@email.com" className="rounded-xl h-11" />

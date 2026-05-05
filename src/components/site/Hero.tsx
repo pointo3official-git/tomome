@@ -6,8 +6,8 @@ import { useBooking } from "./BookingDialog";
 const Hero = () => {
   const { open } = useBooking();
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
-      <div className="absolute inset-0 -z-10">
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden isolate">
+      <div className="absolute inset-0 z-0">
         <img
           src={heroImg}
           alt="Expecting mother gently cradling her belly in soft golden light"
@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-primary/10 blur-3xl" />
       </div>
 
-      <div className="container grid lg:grid-cols-2 gap-12 items-center py-20">
+      <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center py-20">
         <div className="animate-fade-up max-w-xl">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-soft text-primary text-sm font-medium mb-6">
             <Heart className="w-4 h-4 fill-primary" /> Caring companions for your motherhood
