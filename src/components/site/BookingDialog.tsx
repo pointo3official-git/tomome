@@ -53,16 +53,16 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
               <Label htmlFor="name">Your name</Label>
               <Input id="name" required placeholder="Aanya Sharma" className="rounded-xl h-11" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3">
-              <div className="space-y-2">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3"> */}
+              {/* <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input id="email" type="email" required placeholder="you@email.com" className="rounded-xl h-11" />
-              </div>
+              </div> */}
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone</Label>
                 <Input id="phone" type="tel" placeholder="+91" className="rounded-xl h-11" />
               </div>
-            </div>
+            {/* </div> */}
             <div className="space-y-2">
               <Label htmlFor="stage">Pregnancy stage</Label>
               <Input id="stage" placeholder="e.g. 2nd trimester, planning, postpartum" className="rounded-xl h-11" />

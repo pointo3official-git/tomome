@@ -4,9 +4,11 @@ import ctaImg from "@/assets/cta-yoga.jpg";
 import { useBooking } from "./BookingDialog";
 
 const FinalCTA = () => {
-  const { open } = useBooking();
+  const message = encodeURIComponent(
+    "Hi Tomome, book a free consultation.",
+  );
   return (
-    <section id="cta" className="py-24 md:py-32">
+    <section id="cta" className="py-24 md:py-20">
       <div className="container">
         <div className="relative overflow-hidden rounded-[2.5rem] shadow-soft">
           <img
@@ -24,14 +26,20 @@ const FinalCTA = () => {
               <span className="italic text-primary">begins with care.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Take the first gentle step. Join thousands of mothers who feel safe,
-              supported, and beautifully guided — every single day.
+              Take the first gentle step. Join thousands of mothers who feel
+              safe, supported, and beautifully guided — every single day.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl" onClick={() => open("Start your journey")}>
-                Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button variant="soft" size="xl" onClick={() => open("Talk to an expert")}>Talk to an Expert</Button>
+              <a
+                href={`https://wa.me/916238869782?text=${message}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="hero" size="xl">
+                  Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+              {/* <Button variant="soft" size="xl" onClick={() => open("Talk to an expert")}>Talk to an Expert</Button> */}
             </div>
           </div>
         </div>

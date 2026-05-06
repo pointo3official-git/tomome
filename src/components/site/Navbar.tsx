@@ -9,13 +9,15 @@ const links = [
   { href: "#services", label: "Services" },
   { href: "#how", label: "Journey" },
   { href: "#why", label: "Why Tomome" },
-  { href: "#stories", label: "Stories" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { open: openBooking } = useBooking();
+
+  const message = encodeURIComponent(
+    "Hi Tomome, book a free consultation.",
+  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -26,12 +28,14 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
-        scrolled ? "bg-background/80 backdrop-blur-xl shadow-soft" : "bg-transparent"
+        scrolled
+          ? "bg-background/80 backdrop-blur-xl shadow-soft"
+          : "bg-transparent"
       }`}
     >
       <nav className="container flex items-center justify-between py-4">
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="Tomome logo" className="h-16 md:h-20 w-auto" />
+          <img src={logo} alt="Tomome logo" className="h-20 md:h-24 w-auto" />
         </a>
         <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
@@ -46,9 +50,15 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="hidden md:block">
-          <Button variant="hero" size="lg" onClick={() => openBooking("Book a consultation")}>
-            Book Consultation
-          </Button>
+          <a
+            href={`https://wa.me/916238869782?text=${message}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="hero" size="lg">
+              Free Consultation
+            </Button>
+          </a>
         </div>
         <button
           className="md:hidden text-foreground"
@@ -72,8 +82,16 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <Button variant="hero" onClick={() => { setOpen(false); openBooking("Book a consultation"); }}>
-              Book Consultation
+            <Button
+              asChild
+            >
+              <a
+                href={`https://wa.me/916238869782?text=${message}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Consultation
+              </a>
             </Button>
           </ul>
         </div>

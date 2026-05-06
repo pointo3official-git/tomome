@@ -16,21 +16,21 @@ const About = () => {
           />
         </div>
         <div>
-          <span className="text-sm uppercase tracking-[0.2em] text-primary font-medium">
+          {/* <span className="text-sm uppercase tracking-[0.2em] text-primary font-medium">
             Our Story
-          </span>
+          </span> */}
           <h2 className="text-4xl md:text-5xl mt-4 mb-6 text-foreground">
             Motherhood deserves more than{" "}
             <span className="italic text-primary">scattered advice.</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-            Pregnancy can feel overwhelming — endless searches, conflicting opinions,
+            Pregnancy can feel overwhelming endless searches, conflicting opinions,
             and the quiet ache of wondering if you're doing it right. We've been there.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-5">
             Tomome was born to bring everything a mother needs into one warm, trusted
             place: expert gynecologists, nutritionists, prenatal yoga, education, and
-            emotional companionship — gently woven around your unique journey.
+            emotional companionship gently woven around your unique journey.
           </p>
           <p className="text-foreground/90 text-lg leading-relaxed font-serif italic">
             "You don't have to figure this out alone. We're here, every step."

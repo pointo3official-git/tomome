@@ -33,24 +33,24 @@ const Hero = () => {
             <span className="block italic text-primary">held with care.</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Tomome is your gentle guide through pregnancy and early motherhood —
+            Tomome is your gentle guide through pregnancy and early motherhood
             blending expert medical care, nourishing wellness, and emotional support
             into one trusted, beautifully simple journey.
           </p>
-          <div className="flex flex-wrap gap-4">
+          {/* <div className="flex flex-wrap gap-4">
             <Button variant="hero" size="xl" onClick={() => open("Start your journey")}>
               Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button variant="soft" size="xl" onClick={() => open("Book a consultation")}>
               Book a Consultation
             </Button>
-          </div>
-
+          </div> */}
+{/* 
           <div className="flex items-center gap-8 mt-12 pt-8 border-t border-border/50">
             <Stat value="10k+" label="Mothers guided" />
             <Stat value="98%" label="Feel supported" />
             <Stat value="24/7" label="Care access" />
-          </div>
+          </div> */}
         </div>
 
         <div className="hidden lg:block" />
