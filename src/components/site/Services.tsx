@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.png";
 
 const services = [
   { 
@@ -138,7 +139,7 @@ const Services = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <div className={`relative ${isMobile ? 'w-32 h-32' : 'w-48 h-48'} rounded-full overflow-hidden border-4 md:border-8 border-pink-200 shadow-2xl bg-white`}>
               <img
-                src="/src/assets/logo.png"
+                src={logo}
                 alt="Tomome"
                 className="w-full h-full object-cover"
               />
