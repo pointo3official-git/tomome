@@ -178,7 +178,7 @@ const WhyUs = () => {
               className="text-sm md:text-base font-medium"
               style={{ color: "#1A1208" }}
             >
-              That's exactly why we built Tomome —
+              That's exactly why we built Tomome,
               <span style={{ color: "#C0636B" }}> everything in one place</span>,
               available whenever you need it.
             </p>
@@ -195,12 +195,12 @@ const WhyUs = () => {
             className="text-base md:text-lg mb-6"
             style={{ color: "#7A6655" }}
           >
-            All of this — in one program —{" "}
+          
             <span
               className="font-semibold"
               style={{ color: "#1A1208" }}
             >
-              at a price every mother deserves.
+             All of this in one program at a price every mother deserves.
             </span>
           </p>
           {/* <a

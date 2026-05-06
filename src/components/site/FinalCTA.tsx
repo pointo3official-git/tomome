@@ -27,7 +27,7 @@ const FinalCTA = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Take the first gentle step. Join thousands of mothers who feel
-              safe, supported, and beautifully guided — every single day.
+              safe, supported, and beautifully guided every single day.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
